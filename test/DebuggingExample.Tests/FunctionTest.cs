@@ -19,7 +19,7 @@ namespace DebuggingExample.Tests
         }
 
         [Fact]
-        public void TetGetMethod()
+        public void TestGetMethod()
         {
             TestLambdaContext context;
             APIGatewayProxyRequest request;
@@ -32,7 +32,6 @@ namespace DebuggingExample.Tests
             context = new TestLambdaContext();
             response = functions.Get(request, context);
             Assert.Equal(200, response.StatusCode);
-            Assert.Equal("Hello AWS Serverless", response.Body);
         }
     }
 }
